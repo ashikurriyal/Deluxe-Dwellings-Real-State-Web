@@ -17,9 +17,12 @@ const Login = () => {
         console.log(email, password)
 
         signInUser(email, password)
-            .then(result => console.log(result.user))
-        e.target.reset()
-        navigate('/')
+            
+        .then(result => {
+            console.log(result.user)
+            navigate('/')
+            e.target.reset()
+        })
             .catch(error => console.error(error))
     }
 
@@ -34,23 +37,22 @@ const Login = () => {
             .catch(error => console.error(error))
     }
     return (
-        <div className="hero min-h-screen bg-base-200">
-            <div className="hero-content flex-col ">
+        <div className="hero">
+            <div className="hero-content flex-col lg:w-[480px] ">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold">Login Now!</h1>
-
                 </div>
-                <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 border-2">
                     <form onSubmit={handleLogin} className="card-body">
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Email</span>
+                                <span className="label-text text-lg font-semibold">Email</span>
                             </label>
                             <input type="email" name="email" placeholder="Email" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Password</span>
+                                <span className="label-text text-lg font-semibold">Password</span>
                             </label>
                             <input type="password" name="password" placeholder="Password" className="input input-bordered" required />
                             <label className="label">
@@ -58,19 +60,19 @@ const Login = () => {
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary">Login</button>
+                            <button className="btn btn-primary text-lg font-semibold text-white">Login</button>
                         </div>
 
                     </form>
 
                     <div className="form-control">
-                        <button onClick={handleGoogleSignIn} className="rounded-xl p-3 m-7 mt-0 text-white bg-sky-700">Continue with Google</button>
+                        <button onClick={handleGoogleSignIn} className="rounded-xl p-3 m-7 mt-0 text-white bg-sky-700 text-lg font-semibold">Continue with Google</button>
                     </div>
 
-                    <p className="text-center">New Here? Please
+                    <p className="text-center text-base font-semibold">New Here? Please
                         <span>
                             <Link to="/register">
-                                <button className="btn btn-link">Register</button>
+                                <button className="btn btn-link text-base font-semibold">Register</button>
                             </Link>
                         </span>
                     </p>
