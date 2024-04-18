@@ -1,6 +1,8 @@
 /* import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProviders"; */
 
+import Banner from "./Banner";
+
 
 
 const Home = () => {
@@ -9,7 +11,7 @@ const Home = () => {
     console.log(authInfo) */
     return (
         <div>
-            <h2 className="text-3xl">This is Home</h2>
+            <Banner></Banner>
         </div>
     );
 };
