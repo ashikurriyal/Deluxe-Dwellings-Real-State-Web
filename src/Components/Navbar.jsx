@@ -20,10 +20,9 @@ const Navbar = () => {
             return isActive ? { backgroundColor: 'white', color: 'rgb(2 132 199)', fontWeight: '600', borderColor: 'rgb(2, 132, 199)', borderWidth: '2px', borderStyle: 'solid' } : {}
         }}>Home</NavLink></li>
 
-
-        {/* <li><NavLink to="/login">Login</NavLink></li>
-        <li><NavLink to="/register">Register</NavLink></li> */}
-
+        <li><NavLink to="/updateProfile" style={({ isActive }) => {
+            return isActive ? { backgroundColor: 'white', color: 'rgb(2 132 199)', fontWeight: '600', borderColor: 'rgb(2, 132, 199)', borderWidth: '2px', borderStyle: 'solid' } : {}
+        }}>Update Profile</NavLink></li>
 
         <li><NavLink to="/booking" style={({ isActive }) => {
             return isActive ? { backgroundColor: 'white', color: 'rgb(2 132 199)', fontWeight: '600', borderColor: 'rgb(2, 132, 199)', borderWidth: '2px', borderStyle: 'solid' } : {}
@@ -32,9 +31,9 @@ const Navbar = () => {
         {
             user &&
             <>
-                <li><NavLink to="/updateProfile" style={({ isActive }) => {
+                <li><NavLink to="/userProfile" style={({ isActive }) => {
                     return isActive ? { backgroundColor: 'white', color: 'rgb(2 132 199)', fontWeight: '600', borderColor: 'rgb(2, 132, 199)', borderWidth: '2px', borderStyle: 'solid' } : {}
-                }}>Update Profile</NavLink></li>
+                }}>User Profile</NavLink></li>
             </>
         }
 
