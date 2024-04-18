@@ -5,18 +5,37 @@ import { AuthContext } from "../Providers/AuthProviders";
 
 const Navbar = () => {
 
-    const {user, logOut} = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
 
     const handleLogOut = () => {
         logOut()
-        .then(() => console.log('user logged out successfully'))
-        .catch(error => console.error(error))
+            .then(() => console.log('user logged out successfully'))
+            .catch(error => console.error(error))
     }
 
     const navLinks = <>
-        <li><NavLink to="/">Home</NavLink></li>
+        <li><NavLink to="/" style={({ isActive }) => {
+            return isActive ? { backgroundColor: 'white', color: 'rgb(2 132 199)', fontWeight: '600', borderColor: 'rgb(2, 132, 199)', borderWidth: '2px', borderStyle: 'solid' } : {}
+        }}>Home</NavLink></li>
+
+
         <li><NavLink to="/login">Login</NavLink></li>
         <li><NavLink to="/register">Register</NavLink></li>
+
+
+        <li><NavLink to="/booking" style={({ isActive }) => {
+            return isActive ? { backgroundColor: 'white', color: 'rgb(2 132 199)', fontWeight: '600', borderColor: 'rgb(2, 132, 199)', borderWidth: '2px', borderStyle: 'solid' } : {}
+        }}>Booking</NavLink></li>
+
+        {
+            user &&
+            <>
+                <li><NavLink to="/updateProfile" style={({ isActive }) => {
+                    return isActive ? { backgroundColor: 'white', color: 'rgb(2 132 199)', fontWeight: '600', borderColor: 'rgb(2, 132, 199)', borderWidth: '2px', borderStyle: 'solid' } : {}
+                }}>Update Profile</NavLink></li>
+            </>
+        }
+
     </>
     return (
         <div className="navbar bg-base-100">
@@ -42,9 +61,9 @@ const Navbar = () => {
                         <span>{user.email}</span>
                         <a onClick={handleLogOut} className="btn">Sign Out</a>
                     </>
-                    : <Link to="/login"><button className="btn">Log In</button></Link>
+                        : <Link to="/login"><button className="btn">Log In</button></Link>
                 }
-                
+
             </div>
         </div>
     );
