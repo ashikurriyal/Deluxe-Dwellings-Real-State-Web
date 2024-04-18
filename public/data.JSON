@@ -10,7 +10,7 @@
         "area": "6000 sq ft",
         "location": "Malibu, California",
         "facilities": ["Infinity Pool", "Private Beach Access", "Gourmet Kitchen"],
-        "image": "oceanfront_villa.jpg"
+        "image": "https://i.ibb.co/DRx7bHV/alexandre-chambon-aap-Semzfs-Ok-unsplash.jpg"
       },
       {
         "id": 2,
@@ -22,7 +22,7 @@
         "area": "3000 sq ft",
         "location": "New York City, New York",
         "facilities": ["Spa", "Private Terrace", "Home Theater"],
-        "image": "penthouse_perfection.jpg"
+        "image": "https://i.ibb.co/3rKVyMw/francesca-tosolini-t-Hk-JAMc-O3-QE-unsplash.jpg"
       },
       {
         "id": 3,
@@ -34,7 +34,7 @@
         "area": "4000 sq ft",
         "location": "Aspen, Colorado",
         "facilities": ["Outdoor Jacuzzi", "Sauna", "Hiking Trails"],
-        "image": "mountain_retreat.jpg"
+        "image": "https://i.ibb.co/K6fy828/manuel-moreno-DGa0-LQ0y-DPc-unsplash.jpg"
       },
       {
         "id": 4,
@@ -46,7 +46,7 @@
         "area": "8000 sq ft",
         "location": "Lake Como, Italy",
         "facilities": ["Boat Dock", "Tennis Court", "Wine Cellar"],
-        "image": "lakeside_mansion.jpg"
+        "image": "https://i.ibb.co/V2ZQk12/marvin-meyer-8-CDu-HXff3zo-unsplash.jpg"
       }
     ]
   }

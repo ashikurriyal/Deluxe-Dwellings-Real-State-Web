@@ -3,7 +3,7 @@
 
 const Banner = () => {
     return (
-        <div className="carousel lg:h-[554px] h-auto bg-[#1313130D] rounded-2xl flex items-center lg:justify-evenly flex-col-reverse lg:flex-row  gap-2 pt-4 lg:pr-0 lg:pt-0 shadow-xl mb-12">
+        <div className="carousel lg:h-[554px] h-auto bg-[#1313130D] rounded-2xl flex items-center lg:justify-evenly flex-col-reverse lg:flex-row  gap-2 pt-4 lg:pr-0 lg:pt-0 shadow-xl mb-12 bg-no-repeat">
             <div id="slide1" className="carousel-item relative w-full">
                 <img src="https://i.ibb.co/qpwMqcD/vita-vilcina-Kt-Oid0-FLjq-U-unsplash.jpg" className="w-full" />
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
