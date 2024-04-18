@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 const Property = ({ property }) => {
 
-    const {estate_title, segment_name, description, price, status, area, location, facilities, image} = property
+    const {id, estate_title, segment_name, description, price, status, area, location, facilities, image} = property
     return (
-        <Link>
+        <Link to={`/property/${id}`}>
             <div className="card lg:card-side bg-base-100 shadow-xl">
                 <figure><img src={image} alt="Album" /></figure>
                 <div className="card-body">

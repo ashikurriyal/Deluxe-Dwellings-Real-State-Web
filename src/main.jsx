@@ -17,11 +17,13 @@ import UpdateProfile from './Components/UpdateProfile';
 import PrivateRoutes from './Routes/PrivateRoutes';
 import Booking from './Components/Booking';
 import UserProfile from './Components/UserProfile';
+import ErrorPage from './Components/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',
