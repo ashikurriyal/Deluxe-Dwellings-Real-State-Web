@@ -9,12 +9,12 @@ const Root = () => {
     return (
         <div >
             <div className='lg:px-32 px-6'>
-            <Navbar></Navbar>
-            <Outlet></Outlet>
+                <Navbar></Navbar>
+                <Outlet></Outlet>
             </div>
-            
+
             <Footer></Footer>
-            
+
         </div>
     );
 };

@@ -18,6 +18,8 @@ import PrivateRoutes from './Routes/PrivateRoutes';
 import Booking from './Components/Booking';
 import UserProfile from './Components/UserProfile';
 import ErrorPage from './Components/ErrorPage';
+import PropertyDetails from './Components/PropertyDetails';
+import { HelmetProvider } from 'react-helmet-async';
 
 const router = createBrowserRouter([
   {
@@ -48,6 +50,11 @@ const router = createBrowserRouter([
       {
         path: '/userProfile',
         element: <PrivateRoutes><UserProfile></UserProfile></PrivateRoutes>
+      },
+      {
+        path: '/property/:id',
+        element: <PrivateRoutes><PropertyDetails></PropertyDetails></PrivateRoutes>,
+        loader: () => fetch('https://ashikurriyal.github.io/json_data/data.json')
       }
     ]
   },
@@ -55,8 +62,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <HelmetProvider>
     <AuthProviders>
       <RouterProvider router={router} />
     </AuthProviders>
+    </HelmetProvider>
   </React.StrictMode>,
 )

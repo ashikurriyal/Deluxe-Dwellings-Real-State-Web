@@ -16,22 +16,22 @@ const Navbar = () => {
     }
 
     const navLinks = <>
-        <li><NavLink to="/" style={({ isActive }) => {
+        <li className="text-xl font-medium"><NavLink to="/" style={({ isActive }) => {
             return isActive ? { backgroundColor: 'white', color: 'rgb(2 132 199)', fontWeight: '600', borderColor: 'rgb(2, 132, 199)', borderWidth: '2px', borderStyle: 'solid' } : {}
         }}>Home</NavLink></li>
 
-        <li><NavLink to="/updateProfile" style={({ isActive }) => {
+        <li className="text-xl font-medium"><NavLink to="/updateProfile" style={({ isActive }) => {
             return isActive ? { backgroundColor: 'white', color: 'rgb(2 132 199)', fontWeight: '600', borderColor: 'rgb(2, 132, 199)', borderWidth: '2px', borderStyle: 'solid' } : {}
         }}>Update Profile</NavLink></li>
 
-        <li><NavLink to="/booking" style={({ isActive }) => {
+        <li className="text-xl font-medium"><NavLink to="/booking" style={({ isActive }) => {
             return isActive ? { backgroundColor: 'white', color: 'rgb(2 132 199)', fontWeight: '600', borderColor: 'rgb(2, 132, 199)', borderWidth: '2px', borderStyle: 'solid' } : {}
         }}>Booking</NavLink></li>
 
         {
             user &&
             <>
-                <li><NavLink to="/userProfile" style={({ isActive }) => {
+                <li className="text-xl font-medium"><NavLink to="/userProfile" style={({ isActive }) => {
                     return isActive ? { backgroundColor: 'white', color: 'rgb(2 132 199)', fontWeight: '600', borderColor: 'rgb(2, 132, 199)', borderWidth: '2px', borderStyle: 'solid' } : {}
                 }}>User Profile</NavLink></li>
             </>
@@ -49,7 +49,7 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">Deluxe Dwellings</a>
+                <a className="font-bold lg:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-600 to-blue-800">Deluxe Dwellings</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -73,12 +73,12 @@ const Navbar = () => {
                                     </div>
                                 </div>
                         }
-                        <span>{user.email}</span>
+                        {/* <span>{user.email}</span> */}
 
 
-                        <a onClick={handleLogOut} className="btn">Sign Out</a>
+                        <a onClick={handleLogOut} className="btn bg-sky-500  text-base font-medium">Sign Out</a>
                     </>
-                        : <Link to="/login"><button className="btn">Log In</button></Link>
+                        : <Link to="/login"><button className="btn bg-sky-500  text-base font-medium">Log In</button></Link>
                 }
 
 

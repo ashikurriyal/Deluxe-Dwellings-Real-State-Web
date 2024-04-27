@@ -1,6 +1,7 @@
 /* import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProviders"; */
 
+import { Helmet } from "react-helmet-async";
 import Banner from "./Banner";
 import Properties from "./Properties";
 
@@ -8,10 +9,14 @@ import Properties from "./Properties";
 
 const Home = () => {
 
-    /* const authInfo = useContext(AuthContext)
-    console.log(authInfo) */
+    
     return (
         <div>
+            <Helmet>
+                <title>
+                    Deluxe Dwellings | Home
+                </title>
+            </Helmet>
             <Banner></Banner>
             <Properties></Properties>
         </div>

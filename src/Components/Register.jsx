@@ -1,6 +1,10 @@
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProviders";
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet-async";
 
 
 const Register = () => {
@@ -15,11 +19,19 @@ const Register = () => {
         const password = e.target.password.value;
         console.log(email, password, name)
 
+        if (!/^(?=.*[a-z])(?=.*[A-Z]).+$/.test(password)
+        ) {
+            toast.error('Password Must be Contain One Uppercase and One Lowercase Letter')
+            return
+        }
+
+
         //create user in firebase
 
         createUser(email, password)
             .then(result => {
                 console.log(result.user)
+                toast.success('Registraion Success')
                 e.target.reset()
                 navigate('/')
             })
@@ -29,6 +41,11 @@ const Register = () => {
     }
     return (
         <div className="hero">
+            <Helmet>
+                <title>
+                    Deluxe Dwellings | Register
+                </title>
+            </Helmet>
             <div className="hero-content flex-col lg:w-[480px]">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold">Register Now!</h1>
@@ -78,6 +95,7 @@ const Register = () => {
 
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };

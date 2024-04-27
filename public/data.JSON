@@ -1,53 +1,66 @@
-{
-    "estate_cards": [
-      {
+[
+    {
         "id": 1,
         "estate_title": "Oceanfront Villa Paradise",
-        "segment_name": "Luxury",
-        "description": "A stunning oceanfront villa with breathtaking views, luxurious amenities, and unparalleled privacy.",
+        "segment_name": "Coastal Bliss",
+        "description": "Indulge in the epitome of luxury at Oceanfront Villa Paradise in Malibu, California. This stunning estate offers breathtaking ocean views and unmatched privacy. With 6000 sq ft of space, enjoy an infinity pool, private beach access, and a gourmet kitchen. Perfect for a lavish retreat, this rental is priced at $10,000 per night.",
         "price": "$10,000 per night",
         "status": "rent",
         "area": "6000 sq ft",
         "location": "Malibu, California",
-        "facilities": ["Infinity Pool", "Private Beach Access", "Gourmet Kitchen"],
+        "facilities": [
+            "Infinity Pool",
+            "Private Beach Access",
+            "Gourmet Kitchen"
+        ],
         "image": "https://i.ibb.co/DRx7bHV/alexandre-chambon-aap-Semzfs-Ok-unsplash.jpg"
-      },
-      {
+    },
+    {
         "id": 2,
         "estate_title": "Penthouse Perfection",
-        "segment_name": "Luxury",
+        "segment_name": "Skyline Serenity",
         "description": "An opulent penthouse offering panoramic city skyline views, exquisite design, and top-of-the-line amenities.",
         "price": "$5,000 per night",
         "status": "rent",
         "area": "3000 sq ft",
         "location": "New York City, New York",
-        "facilities": ["Spa", "Private Terrace", "Home Theater"],
+        "facilities": [
+            "Spa",
+            "Private Terrace",
+            "Home Theater"
+        ],
         "image": "https://i.ibb.co/3rKVyMw/francesca-tosolini-t-Hk-JAMc-O3-QE-unsplash.jpg"
-      },
-      {
+    },
+    {
         "id": 3,
         "estate_title": "Majestic Mountain Retreat",
-        "segment_name": "Luxury",
+        "segment_name": "Summit Sanctuary",
         "description": "A majestic mountain retreat nestled in the heart of the Rockies, offering serenity, seclusion, and unparalleled natural beauty.",
         "price": "$8,500 per night",
         "status": "rent",
         "area": "4000 sq ft",
         "location": "Aspen, Colorado",
-        "facilities": ["Outdoor Jacuzzi", "Sauna", "Hiking Trails"],
-        "image": "https://i.ibb.co/K6fy828/manuel-moreno-DGa0-LQ0y-DPc-unsplash.jpg"
-      },
-      {
+        "facilities": [
+            "Outdoor Jacuzzi",
+            "Sauna",
+            "Hiking Trails"
+        ],
+        "image": "https://i.ibb.co/dBLkd7g/seth-kane-XOEAHb-E-v-O8-unsplash.jpg"
+    },
+    {
         "id": 4,
         "estate_title": "Luxury Lakeside Mansion",
-        "segment_name": "Luxury",
+        "segment_name": "Lakeside Luxury",
         "description": "A palatial lakeside mansion boasting stunning water views, lavish interiors, and resort-style amenities.",
         "price": "$12,000 per night",
         "status": "rent",
         "area": "8000 sq ft",
         "location": "Lake Como, Italy",
-        "facilities": ["Boat Dock", "Tennis Court", "Wine Cellar"],
+        "facilities": [
+            "Boat Dock",
+            "Tennis Court",
+            "Wine Cellar"
+        ],
         "image": "https://i.ibb.co/V2ZQk12/marvin-meyer-8-CDu-HXff3zo-unsplash.jpg"
-      }
-    ]
-  }
-  
+    }
+]

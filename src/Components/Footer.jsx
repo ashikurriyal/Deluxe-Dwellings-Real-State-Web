@@ -1,16 +1,11 @@
 import { NavLink } from "react-router-dom";
-import footer from '../assets/images/footer.png'
 
 const Footer = () => {
 
-    const footerStyle = {
-        backgroundImage: `url(${ footer })`,
-        backgroundRepeat: "no-repeat",
-        
-    }
+    
 
     return (
-        <footer className=" text-white" style={footerStyle}>
+        <footer className=" text-white bg-sky-600">
             <div className="container flex flex-col items-center justify-center py-10 mx-auto space-y-8 lg:space-y-0 lg:gap-10">
                 <div className="lg:w-full">
                     <NavLink to={'/'}><h1 className="text-center font-marcellus text-3xl lg:text-5xl font-bold hover:drop-shadow-xl ">Deluxe Dwellings</h1></NavLink>
